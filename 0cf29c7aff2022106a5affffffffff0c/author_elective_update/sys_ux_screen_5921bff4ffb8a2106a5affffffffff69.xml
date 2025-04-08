@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="DELETE">
+        <active>true</active>
+        <app_config display_value="BloodBanker">2bdf8676ffe022106a5affffffffff10</app_config>
+        <description/>
+        <disable_auto_reflow>true</disable_auto_reflow>
+        <event_mappings/>
+        <macroponent display_value="Default">c121bff4ffb8a2106a5affffffffff64</macroponent>
+        <macroponent_config>{
+    "bare": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "headerLevel": {
+        "type": "JSON_LITERAL",
+        "value": "1"
+    },
+    "headingOnlyVisibleToScreenReaders": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "interceptNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "label": {
+        "type": "JSON_LITERAL",
+        "value": ""
+    },
+    "propagateNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "scrollable": {
+        "type": "JSON_LITERAL",
+        "value": "y"
+    }
+}</macroponent_config>
+        <name>Default</name>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="donor-donation-form">4121f3f4ffb8a2106a5affffffffffec</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-07 05:06:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5921bff4ffb8a2106a5affffffffff69</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_ux_screen_5921bff4ffb8a2106a5affffffffff69</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 05:06:06</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="DELETE" query="documentkey=5921bff4ffb8a2106a5affffffffff69"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</application>
+        <file_path/>
+        <instance_id>32d9ab945d502210958bd8da217c4512</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_ux_screen_5921bff4ffb8a2106a5affffffffff69</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>true</active><app_config display_value="BloodBanker">2bdf8676ffe022106a5affffffffff10</app_config><description/><disable_auto_reflow>true</disable_auto_reflow><event_mappings/><macroponent display_value="Default">c121bff4ffb8a2106a5affffffffff64</macroponent><macroponent_config>{
+    "bare": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "headerLevel": {
+        "type": "JSON_LITERAL",
+        "value": "1"
+    },
+    "headingOnlyVisibleToScreenReaders": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "interceptNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "label": {
+        "type": "JSON_LITERAL",
+        "value": ""
+    },
+    "propagateNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "scrollable": {
+        "type": "JSON_LITERAL",
+        "value": "y"
+    }
+}</macroponent_config><name>Default</name><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="donor-donation-form">4121f3f4ffb8a2106a5affffffffffec</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-07 05:06:06</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>5921bff4ffb8a2106a5affffffffff69</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Default</sys_name><sys_overrides/><sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package><sys_policy/><sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope><sys_update_name>sys_ux_screen_5921bff4ffb8a2106a5affffffffff69</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-07 05:06:06</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=5921bff4ffb8a2106a5affffffffff69"/></record_update>]]></payload>
+        <payload_hash>-277464710</payload_hash>
+        <record_name>Default</record_name>
+        <reverted_from/>
+        <source>00f29c7aff2022106a5affffffffff11</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-07 05:06:06</sys_created_on>
+        <sys_id>9921bff4ffb8a2106a5affffffffff6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1960ea43b2c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 05:06:06</sys_updated_on>
+        <type>UX Screen</type>
+        <update_guid>9d21bff42cb8a21016a66b96d647a76b</update_guid>
+        <update_guid_history>9d21bff42cb8a21016a66b96d647a76b:-277464710</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-07 19:48:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen">sys_ux_screen</sys_db_object>
+        <sys_id>4856fe349b4d404c9a84025ca8672584</sys_id>
+        <sys_metadata>5921bff4ffb8a2106a5affffffffff69</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_scope_delete display_value="">15eb4780ab3c40378274b73cec9ac5c1</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_5921bff4ffb8a2106a5affffffffff69</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_5921bff4ffb8a2106a5affffffffff69">9921bff4ffb8a2106a5affffffffff6c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 19:48:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

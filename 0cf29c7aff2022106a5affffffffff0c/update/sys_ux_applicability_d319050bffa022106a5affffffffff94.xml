@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_applicability">
+    <sys_ux_applicability action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <api_name>sn_bloodbanker.All Blood Bank users</api_name>
+        <description>All Users</description>
+        <name>All Blood Bank users</name>
+        <role_names/>
+        <roles>d913d07aff2022106a5afffffffffff9,9d139872ff2022106a5affffffffff91,19139872ff2022106a5affffffffff8d,9913d872ff2022106a5affffffffffd5</roles>
+        <sys_class_name>sys_ux_applicability</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 06:24:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d319050bffa022106a5affffffffff94</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>All Blood Bank users</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_ux_applicability_d319050bffa022106a5affffffffff94</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 19:09:42</sys_updated_on>
+    </sys_ux_applicability>
+</record_update>

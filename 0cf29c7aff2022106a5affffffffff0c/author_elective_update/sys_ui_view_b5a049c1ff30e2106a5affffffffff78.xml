@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="DELETE">
+        <group/>
+        <hidden>false</hidden>
+        <name>branch_manager_view</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-07 10:53:28</sys_created_on>
+        <sys_id>b5a049c1ff30e2106a5affffffffff78</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>branch manager view</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_ui_view_b5a049c1ff30e2106a5affffffffff78</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 10:53:28</sys_updated_on>
+        <title>branch manager view</title>
+        <user/>
+    </sys_ui_view>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</application>
+        <file_path/>
+        <instance_id>32d9ab945d502210958bd8da217c4512</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_ui_view_b5a049c1ff30e2106a5affffffffff78</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view"><sys_ui_view action="INSERT_OR_UPDATE"><group/><hidden>false</hidden><name>branch_manager_view</name><roles/><sys_class_name>sys_ui_view</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-07 10:53:28</sys_created_on><sys_id>b5a049c1ff30e2106a5affffffffff78</sys_id><sys_mod_count>0</sys_mod_count><sys_name>branch manager view</sys_name><sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package><sys_policy/><sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope><sys_update_name>sys_ui_view_b5a049c1ff30e2106a5affffffffff78</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-07 10:53:28</sys_updated_on><title>branch manager view</title><user/></sys_ui_view></record_update>]]></payload>
+        <payload_hash>-696892562</payload_hash>
+        <record_name>branch manager view</record_name>
+        <reverted_from/>
+        <source>00f29c7aff2022106a5affffffffff11</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-07 10:53:28</sys_created_on>
+        <sys_id>71a049c1ff30e2106a5affffffffff7b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1960fe2441e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 10:53:28</sys_updated_on>
+        <type>UI View</type>
+        <update_guid>75a049c1e430e21040feab86d483f17a</update_guid>
+        <update_guid_history>75a049c1e430e21040feab86d483f17a:-696892562</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-07 19:31:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_view">sys_ui_view</sys_db_object>
+        <sys_id>e2a9f40f26ff40c0aa76ca683e611000</sys_id>
+        <sys_metadata>b5a049c1ff30e2106a5affffffffff78</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>branch manager view</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_scope_delete display_value="">15eb4780ab3c40378274b73cec9ac5c1</sys_scope_delete>
+        <sys_update_name>sys_ui_view_b5a049c1ff30e2106a5affffffffff78</sys_update_name>
+        <sys_update_version display_value="sys_ui_view_b5a049c1ff30e2106a5affffffffff78">71a049c1ff30e2106a5affffffffff7b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 19:31:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

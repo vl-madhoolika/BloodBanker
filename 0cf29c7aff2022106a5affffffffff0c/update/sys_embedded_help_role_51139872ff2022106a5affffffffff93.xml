@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <role display_value="sn_bloodbanker.branchmanager" name="sn_bloodbanker.branchmanager">9d139872ff2022106a5affffffffff91</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 07:48:02</sys_created_on>
+        <sys_id>51139872ff2022106a5affffffffff93</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>9d139872ff2022106a5affffffffff91</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_embedded_help_role_51139872ff2022106a5affffffffff93</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 07:48:02</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

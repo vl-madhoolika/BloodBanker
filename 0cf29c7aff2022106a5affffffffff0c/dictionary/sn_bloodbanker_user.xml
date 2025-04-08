@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="73e81872ff6022106a5affffffffff6f" label="User" max_length="40" name="sn_bloodbanker_user" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Branch ID" max_length="32" name="branch_id" reference="sn_bloodbanker_branch" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Last Donation Date" mandatory="true" max_length="40" name="last_donation_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="fit" label="Medical Condition&#9;" mandatory="true" max_length="40" name="medical_condition" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Fit" value="fit"/>
+                <element inactive_on_update="false" label="Unfit" value="unfit"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="User Identification Number" max_length="40" name="number" type="string"/>
+        <element choice="3" default="donor" label="Role" mandatory="true" max_length="40" name="role" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Donor" sequence="0" value="donor"/>
+                <element inactive_on_update="false" label="Recipient" sequence="1" value="recipient"/>
+                <element inactive_on_update="false" label="Branch Manager" sequence="2" value="branch_manager"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="o_positive" label="Blood Type" mandatory="true" max_length="40" name="bloodt_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="O+" sequence="6" value="o_positive"/>
+                <element inactive_on_update="false" label="A-" sequence="1" value="a_negative"/>
+                <element inactive_on_update="false" label="O-" sequence="7" value="o_negative"/>
+                <element inactive_on_update="false" label="A+" sequence="0" value="a_positive"/>
+                <element inactive_on_update="false" label="B+" sequence="4" value="b_positive"/>
+                <element inactive_on_update="false" label="AB+" sequence="2" value="ab_positive"/>
+                <element inactive_on_update="false" label="B-" sequence="5" value="b_negative"/>
+                <element inactive_on_update="false" label="AB-" sequence="3" value="ab_negative"/>
+            </choice>
+        </element>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="User ID" max_length="32" name="user_id" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+        <index name="index2">
+            <element name="user_id"/>
+        </index>
+    </element>
+</database>

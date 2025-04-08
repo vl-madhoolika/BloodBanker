@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:57:15</sys_created_on>
+        <sys_id>de2082ccff30a2106a5affffffffff72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.sn_bloodbanker.recipient</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_security_acl display_value="">56cfbd8cff30a2106a5affffffffff33</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_de2082ccff30a2106a5affffffffff72</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:57:15</sys_updated_on>
+        <sys_user_role display_value="sn_bloodbanker.recipient" name="sn_bloodbanker.recipient">9913d872ff2022106a5affffffffffd5</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</application>
+        <file_path/>
+        <instance_id>32d9ab945d502210958bd8da217c4512</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_security_acl_role_de2082ccff30a2106a5affffffffff72</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-04 12:57:15</sys_created_on><sys_id>de2082ccff30a2106a5affffffffff72</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.sn_bloodbanker.recipient</sys_name><sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package><sys_policy/><sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope><sys_security_acl display_value="">56cfbd8cff30a2106a5affffffffff33</sys_security_acl><sys_update_name>sys_security_acl_role_de2082ccff30a2106a5affffffffff72</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-04 12:57:15</sys_updated_on><sys_user_role display_value="sn_bloodbanker.recipient" name="sn_bloodbanker.recipient">9913d872ff2022106a5affffffffffd5</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-312311459</payload_hash>
+        <record_name>.sn_bloodbanker.recipient</record_name>
+        <reverted_from/>
+        <source>00f29c7aff2022106a5affffffffff11</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:57:15</sys_created_on>
+        <sys_id>613046ccff30a2106a5affffffffff56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19600e0818d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-04 12:57:15</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>653046ccaa30a21007205cea513d8d55</update_guid>
+        <update_guid_history>653046ccaa30a21007205cea513d8d55:-312311459</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".sn_bloodbanker.recipient">b996fc85fffca2106a5affffffffff70</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-07 10:09:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>9e02106ac9b8426e9227d2539e5f08a4</sys_id>
+        <sys_metadata>de2082ccff30a2106a5affffffffff72</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.sn_bloodbanker.recipient</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_parent display_value="sn_bloodbanker_request">56cfbd8cff30a2106a5affffffffff33</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_scope_delete display_value="">15eb4780ab3c40378274b73cec9ac5c1</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_de2082ccff30a2106a5affffffffff72</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_de2082ccff30a2106a5affffffffff72">613046ccff30a2106a5affffffffff56</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 10:09:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Pending Requests">9dc10105ff30e2106a5affffffffff66</application>
+        <assessment/>
+        <device_type/>
+        <filter table="sn_bloodbanker_request">status=pending^EQ<item display_value="Pending" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="pending"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Pending Requests Module</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>sn_bloodbanker_request</name>
+        <order>100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>sn_bloodbanker.branchmanager</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-07 11:12:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ad64c109ff30e2106a5affffffffff59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Pending Requests Module</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_app_module_ad64c109ff30e2106a5affffffffff59</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 11:12:12</sys_updated_on>
+        <timeline_page/>
+        <title>Pending Requests Module</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</application>
+        <file_path/>
+        <instance_id>32d9ab945d502210958bd8da217c4512</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_app_module_ad64c109ff30e2106a5affffffffff59</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Pending Requests">9dc10105ff30e2106a5affffffffff66</application><assessment/><device_type/><filter table="sn_bloodbanker_request">status=pending^EQ<item display_value="Pending" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="pending"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Pending Requests Module</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>sn_bloodbanker_request</name><order>100</order><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>sn_bloodbanker.branchmanager</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-07 11:12:12</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>ad64c109ff30e2106a5affffffffff59</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Pending Requests Module</sys_name><sys_overrides/><sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package><sys_policy/><sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope><sys_update_name>sys_app_module_ad64c109ff30e2106a5affffffffff59</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-07 11:12:12</sys_updated_on><timeline_page/><title>Pending Requests Module</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-1598112349</payload_hash>
+        <record_name>Pending Requests Module</record_name>
+        <reverted_from/>
+        <source>00f29c7aff2022106a5affffffffff11</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-07 11:12:12</sys_created_on>
+        <sys_id>48f40909ff30e2106a5affffffffffa8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1960ff368ce0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 11:12:12</sys_updated_on>
+        <type>Module</type>
+        <update_guid>4cf409099130e21036433be0327a8fa7</update_guid>
+        <update_guid_history>4cf409099130e21036433be0327a8fa7:-1598112349</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Pending Requests Module">6cfbc1cdff30e2106a5affffffffff0c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-07 11:42:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>0b1a16f0f1494e60b72849016cc30900</sys_id>
+        <sys_metadata>ad64c109ff30e2106a5affffffffff59</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Pending Requests Module</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_scope_delete display_value="">15eb4780ab3c40378274b73cec9ac5c1</sys_scope_delete>
+        <sys_update_name>sys_app_module_ad64c109ff30e2106a5affffffffff59</sys_update_name>
+        <sys_update_version display_value="sys_app_module_ad64c109ff30e2106a5affffffffff59">48f40909ff30e2106a5affffffffffa8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-07 11:42:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

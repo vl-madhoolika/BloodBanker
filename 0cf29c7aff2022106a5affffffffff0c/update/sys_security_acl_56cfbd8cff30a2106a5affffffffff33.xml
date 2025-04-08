@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>The Donor and Recipient should be allowed to read request but only their own requests</description>
+        <local_or_existing>Local</local_or_existing>
+        <name>sn_bloodbanker_request</name>
+        <operation display_value="read">read</operation>
+        <script><![CDATA[// (function() {
+//   var userID = gs.getUserID();
+//   var userGR = new GlideRecord('sn_bloodbanker_user');
+//   userGR.addQuery('user_id', userID);
+//   userGR.query();
+
+//   if (userGR.next()) {
+//     // Donor or recipient sees only their own requests
+//     if (gs.hasRole('sn_bloodbanker.donor') || gs.hasRole('sn_bloodbanker.recipient')) {
+//       return current.user == userGR.sys_id;
+//     }
+
+//     // Branch manager sees requests from their branch
+//     if (gs.hasRole('sn_bloodbanker.branchmanager')) {
+//       return current.branch == userGR.branch_id;
+//     }
+//   }
+
+//   // Admin sees all
+//   return gs.hasRole('sn_bloodbanker.admin');
+// })();
+
+(function() {
+  var userID = gs.getUserID();
+  var userGR = new GlideRecord('sn_bloodbanker_user');
+  userGR.addQuery('user_id', userID);
+  userGR.query();
+
+  if (userGR.next()) {
+    if (gs.hasRole('sn_bloodbanker.donor') || gs.hasRole('sn_bloodbanker.recipient')) {
+      return current.user == userGR.sys_id;
+    }
+    if (gs.hasRole('sn_bloodbanker.branchmanager')) {
+      return current.branch == userGR.branch_id;
+    }
+  }
+  return gs.hasRole('sn_bloodbanker.admin');
+})();
+]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-04 12:57:15</sys_created_on>
+        <sys_id>56cfbd8cff30a2106a5affffffffff33</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>sn_bloodbanker_request</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_security_acl_56cfbd8cff30a2106a5affffffffff33</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-08 05:14:35</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

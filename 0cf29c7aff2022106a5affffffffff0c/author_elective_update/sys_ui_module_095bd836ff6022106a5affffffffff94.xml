@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="Branch">095bd836ff6022106a5affffffffff91</application>
+        <filter/>
+        <name>Branches</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>sn_bloodbanker.branch_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 08:24:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>095bd836ff6022106a5affffffffff94</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Branches</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_ui_module_095bd836ff6022106a5affffffffff94</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 08:24:04</sys_updated_on>
+        <table>sn_bloodbanker_branch</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</application>
+        <file_path/>
+        <instance_id>32d9ab945d502210958bd8da217c4512</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_ui_module_095bd836ff6022106a5affffffffff94</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Branch">095bd836ff6022106a5affffffffff91</application><filter/><name>Branches</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>sn_bloodbanker.branch_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-03-31 08:24:04</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>095bd836ff6022106a5affffffffff94</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Branches</sys_name><sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package><sys_policy/><sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope><sys_update_name>sys_ui_module_095bd836ff6022106a5affffffffff94</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-03-31 08:24:04</sys_updated_on><table>sn_bloodbanker_branch</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>-1718034180</payload_hash>
+        <record_name>Branches</record_name>
+        <reverted_from/>
+        <source>00f29c7aff2022106a5affffffffff11</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 08:24:04</sys_created_on>
+        <sys_id>c55bd836ff6022106a5affffffffff97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>195eb4cf6e80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 08:24:04</sys_updated_on>
+        <type>Module</type>
+        <update_guid>c95bd83657602210396403234baa2096</update_guid>
+        <update_guid_history>c95bd83657602210396403234baa2096:-1718034180</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-03-31 08:31:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>023ced2ac5cb4be7a2acaa038db97f21</sys_id>
+        <sys_metadata>095bd836ff6022106a5affffffffff94</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Branches</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_scope_delete display_value="">15eb4780ab3c40378274b73cec9ac5c1</sys_scope_delete>
+        <sys_update_name>sys_ui_module_095bd836ff6022106a5affffffffff94</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_095bd836ff6022106a5affffffffff94">c55bd836ff6022106a5affffffffff97</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-03-31 08:31:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

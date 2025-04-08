@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_applicability_m2m_screen">
+    <sys_ux_applicability_m2m_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applicability display_value="All Blood Bank users">d319050bffa022106a5affffffffff94</applicability>
+        <order>0</order>
+        <screen display_value="Default">69850107ffa022106a5affffffffffda</screen>
+        <sys_class_name>sys_ux_applicability_m2m_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-01 06:26:49</sys_created_on>
+        <sys_id>5d1a050bffa022106a5affffffffff67</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_ux_applicability_m2m_screen_5d1a050bffa022106a5affffffffff67</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-01 06:29:42</sys_updated_on>
+    </sys_ux_applicability_m2m_screen>
+</record_update>

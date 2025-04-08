@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="838b1076ff6022106a5affffffffff92" label="Branch" max_length="40" name="sn_bloodbanker_branch" type="collection">
+        <element label="Manager Contact" max_length="40" name="manager_contact" type="ph_number"/>
+        <element label="Branch Name" max_length="40" name="branch_name" type="string"/>
+        <element label="Branch Manager" max_length="32" name="branch_manager" reference="sn_bloodbanker_user" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Branch ID" max_length="40" name="number" type="string"/>
+        <element label="Location" max_length="40" name="location" type="string"/>
+        <index name="index">
+            <element name="branch_manager"/>
+        </index>
+    </element>
+</database>

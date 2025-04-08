@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="fccd7936ffa022106a5affffffffffc0" label="Campaign" max_length="40" name="sn_bloodbanker_campaign" type="collection">
+        <element label="Blood Type Focus" max_length="4000" name="blood_type_focus" reference="sn_bloodbanker_blood_inventory" type="glide_list"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <element label="Branch Manager" max_length="32" name="branch_manager" reference="sn_bloodbanker_branch" type="reference"/>
+        <element label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <element label="Location" max_length="40" name="location" type="string"/>
+        <element label="Campaign Title" max_length="40" name="campaign_title" type="string"/>
+        <element label="End Date" max_length="40" name="end_date" type="glide_date"/>
+        <index name="index">
+            <element name="branch_manager"/>
+        </index>
+    </element>
+</database>
