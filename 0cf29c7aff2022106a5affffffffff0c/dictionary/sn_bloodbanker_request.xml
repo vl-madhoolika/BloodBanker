@@ -2,26 +2,27 @@
     <element db_object_id="67ac75f2ffa022106a5affffffffffd5" label="Request" max_length="40" name="sn_bloodbanker_request" type="collection">
         <element choice="3" label="Status" max_length="40" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
-                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
-                <element inactive_on_update="false" label="Withdraw" sequence="3" value="withdraw"/>
-                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
+                <element inactive_on_update="false" label="Withdraw" sequence="4" value="withdraw"/>
+                <element inactive_on_update="false" label="Collected" sequence="0"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
             </choice>
         </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Request ID" max_length="40" name="number" type="string"/>
         <element choice="3" label="Blood Type" max_length="1024" name="blood_type" type="choice">
             <choice>
-                <element inactive_on_update="false" label="B" sequence="2" value="b"/>
+                <element inactive_on_update="false" label="B+" sequence="2" value="b"/>
                 <element inactive_on_update="false" label="AB-" sequence="7" value="ab_negative"/>
-                <element inactive_on_update="false" label="AB" sequence="6" value="ab"/>
+                <element inactive_on_update="false" label="AB+" sequence="6" value="ab"/>
                 <element inactive_on_update="false" label="B-" sequence="3" value="b_negative"/>
                 <element inactive_on_update="false" label="A-" sequence="1" value="a_negative"/>
                 <element inactive_on_update="false" label="O-" sequence="5" value="o_negative"/>
-                <element inactive_on_update="false" label="A" sequence="0" value="a"/>
-                <element inactive_on_update="false" label="O" sequence="4" value="o"/>
+                <element inactive_on_update="false" label="A+" sequence="0" value="a"/>
+                <element inactive_on_update="false" label="O+" sequence="4" value="o"/>
             </choice>
         </element>
-        <element choice="1" default="low" display="true" label="Urgency" max_length="40" name="urgency" type="choice">
+        <element choice="1" default="low" label="Urgency" max_length="40" name="urgency" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Low" sequence="0" value="low"/>
                 <element inactive_on_update="false" label="Medium" sequence="1" value="medium"/>

@@ -20,7 +20,7 @@
             <element>blood_type</element>
             <hint/>
             <inactive>false</inactive>
-            <label>A</label>
+            <label>A+</label>
             <language>en</language>
             <name>sn_bloodbanker_request</name>
             <sequence>0</sequence>
@@ -29,9 +29,9 @@
             <sys_created_on>2025-04-04 12:25:34</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-04-04 12:25:34</sys_updated_on>
+            <sys_updated_on>2025-04-08 15:21:31</sys_updated_on>
             <value>a</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -58,7 +58,7 @@
             <element>blood_type</element>
             <hint/>
             <inactive>false</inactive>
-            <label>B</label>
+            <label>B+</label>
             <language>en</language>
             <name>sn_bloodbanker_request</name>
             <sequence>2</sequence>
@@ -67,9 +67,9 @@
             <sys_created_on>2025-04-04 12:25:34</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-04-04 12:25:34</sys_updated_on>
+            <sys_updated_on>2025-04-08 15:21:31</sys_updated_on>
             <value>b</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -96,7 +96,7 @@
             <element>blood_type</element>
             <hint/>
             <inactive>false</inactive>
-            <label>O</label>
+            <label>O+</label>
             <language>en</language>
             <name>sn_bloodbanker_request</name>
             <sequence>4</sequence>
@@ -105,9 +105,9 @@
             <sys_created_on>2025-04-04 12:25:34</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-04-04 12:25:34</sys_updated_on>
+            <sys_updated_on>2025-04-08 15:21:31</sys_updated_on>
             <value>o</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -134,7 +134,7 @@
             <element>blood_type</element>
             <hint/>
             <inactive>false</inactive>
-            <label>AB</label>
+            <label>AB+</label>
             <language>en</language>
             <name>sn_bloodbanker_request</name>
             <sequence>6</sequence>
@@ -143,9 +143,9 @@
             <sys_created_on>2025-04-04 12:25:34</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-04-04 12:25:34</sys_updated_on>
+            <sys_updated_on>2025-04-08 15:21:31</sys_updated_on>
             <value>ab</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">

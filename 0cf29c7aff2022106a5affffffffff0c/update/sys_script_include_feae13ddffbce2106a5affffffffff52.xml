@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>sn_bloodbanker.BloodbankerUserService</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>BloodbankerUserService</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var BloodbankerUserService = Class.create();
+BloodbankerUserService.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+  getUserInfo: function() {
+    var result = {};
+    var userID = gs.getUserID();
+
+    var userGR = new GlideRecord('sn_bloodbanker_user');
+    userGR.addQuery('user_id', userID); 
+    userGR.query();
+
+    if (userGR.next()) {
+      result.sys_id = userGR.getUniqueValue(); 
+      result.blood_type = userGR.getDisplayValue('bloodt_type');
+      result.branch_id = userGR.getValue('branch_id');
+      gs.info('Returning branch_id: ' + result.branch_id);
+    }
+
+    return new global.JSON().encode(result);
+  },
+
+  type: 'BloodbankerUserService'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 17:03:10</sys_created_on>
+        <sys_id>feae13ddffbce2106a5affffffffff52</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>BloodbankerUserService</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_script_include_feae13ddffbce2106a5affffffffff52</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-10 06:36:43</sys_updated_on>
+    </sys_script_include>
+</record_update>

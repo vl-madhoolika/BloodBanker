@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name>withdraw_request</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>(gs.hasRole('sn_bloodbanker.donor') || gs.hasRole('sn_bloodbanker.recipient')) &amp;&amp; current.status == 'pending'</condition>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>true</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>true</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>true</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Withdraw Request</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[current.status = 'withdraw';
+current.update();
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 19:06:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>01f97715ff7026106a5affffffffff60</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Withdraw Request</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_ui_action_01f97715ff7026106a5affffffffff60</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-09 04:40:23</sys_updated_on>
+        <table>sn_bloodbanker_request</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</application>
+        <file_path/>
+        <instance_id>32d9ab945d502210958bd8da217c4512</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_ui_action_01f97715ff7026106a5affffffffff60</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;withdraw_request&lt;/action_name&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;false&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition&gt;(gs.hasRole('sn_bloodbanker.donor') || gs.hasRole('sn_bloodbanker.recipient')) &amp;amp;&amp;amp; current.status == 'pending'&lt;/condition&gt;&lt;form_action&gt;false&lt;/form_action&gt;&lt;form_button&gt;false&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;format_for_configurable_workspace&gt;false&lt;/format_for_configurable_workspace&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;true&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;true&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;true&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;Withdraw Request&lt;/name&gt;&lt;onclick/&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[current.status = 'withdraw';
+current.update();
+]]&gt;&lt;/script&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-04-08 19:06:01&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;01f97715ff7026106a5affffffffff60&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Withdraw Request&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="BloodBanker" source="sn_bloodbanker"&gt;0cf29c7aff2022106a5affffffffff0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BloodBanker"&gt;0cf29c7aff2022106a5affffffffff0c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_01f97715ff7026106a5affffffffff60&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-04-09 04:40:23&lt;/sys_updated_on&gt;&lt;table&gt;sn_bloodbanker_request&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>969796505</payload_hash>
+        <record_name>Withdraw Request</record_name>
+        <reverted_from/>
+        <source>8ae70d5dff78e2106a5affffffffff84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-09 04:40:23</sys_created_on>
+        <sys_id>c47e31e5ff3022106a5affffffffff3f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19618d967460000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-09 04:40:23</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>4c7e31e5fa3022100696725f4394933e</update_guid>
+        <update_guid_history>4c7e31e5fa3022100696725f4394933e:969796505,fbcd3759c8702610bfe7490c4ca43fa0:197811677,ec7d3f198b7026104600224332e09603:-216228302,aefaf755897026107bfaea77c5725853:969796505</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-09 04:45:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>4cbc7613e047484bbd658728bc3c7df1</sys_id>
+        <sys_metadata>01f97715ff7026106a5affffffffff60</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Withdraw Request</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_parent display_value="Request">67ac75f2ffa022106a5affffffffffd5</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_scope_delete display_value="">15eb4780ab3c40378274b73cec9ac5c1</sys_scope_delete>
+        <sys_update_name>sys_ui_action_01f97715ff7026106a5affffffffff60</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_01f97715ff7026106a5affffffffff60">c47e31e5ff3022106a5affffffffff3f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-09 04:45:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

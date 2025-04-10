@@ -12,6 +12,7 @@
         <element choice="3" default="donor" label="Role" mandatory="true" max_length="40" name="role" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Donor" sequence="0" value="donor"/>
+                <element inactive_on_update="false" label="Admin" sequence="3" value="admin"/>
                 <element inactive_on_update="false" label="Recipient" sequence="1" value="recipient"/>
                 <element inactive_on_update="false" label="Branch Manager" sequence="2" value="branch_manager"/>
             </choice>

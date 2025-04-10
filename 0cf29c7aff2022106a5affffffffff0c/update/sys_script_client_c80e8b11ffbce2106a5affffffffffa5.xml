@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Auto-fill User, Blood Type &amp; Branch  using a Client Script that populates the form based on the logged-in user.</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Auto Populate Request Form</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+  var ga = new GlideAjax('BloodbankerUserService');
+  ga.addParam('sysparm_name', 'getUserInfo');
+  ga.getXMLAnswer(function(response) {
+    try {
+      var data = JSON.parse(response);
+      if (data) {
+        if (data.sys_id) {
+          g_form.setValue('user', data.sys_id);
+        }
+        if (data.blood_type) {
+          g_form.setValue('blood_type', data.blood_type);
+        }
+        if (data.branch_id) {
+          g_form.setValue('branch', data.branch_id);
+        }
+      }
+    } catch (e) {
+      console.error("Error parsing response: ", e);
+    }
+  });
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-08 16:02:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c80e8b11ffbce2106a5affffffffffa5</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Auto Populate Request Form</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_script_client_c80e8b11ffbce2106a5affffffffffa5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-09 17:50:00</sys_updated_on>
+        <table>sn_bloodbanker_request</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

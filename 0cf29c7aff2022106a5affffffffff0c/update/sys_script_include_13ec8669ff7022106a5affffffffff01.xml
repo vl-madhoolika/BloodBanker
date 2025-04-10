@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>sn_bloodbanker.BloodbankerStatusControl</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>BloodbankerStatusControl</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var BloodbankerStatusControl = Class.create();
+BloodbankerStatusControl.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+  getValidStatuses: function() {
+    var requestId = this.getParameter('sysparm_request_id');
+    var result = [];
+
+    var reqGR = new GlideRecord('sn_bloodbanker_request');
+    if (reqGR.get(requestId)) {
+      var currentStatus = reqGR.getValue('status');
+      var currentUser = gs.getUserID();
+
+      // Get logged in bloodbanker user
+      var userGR = new GlideRecord('sn_bloodbanker_user');
+      userGR.addQuery('user_id', currentUser);
+      userGR.query();
+
+      if (userGR.next()) {
+        var isOwner = reqGR.user == userGR.sys_id;
+        var isSameBranch = reqGR.branch == userGR.branch_id;
+
+        if (gs.hasRole('sn_bloodbanker.donor') || gs.hasRole('sn_bloodbanker.recipient')) {
+          if (currentStatus === 'pending' && isOwner) {
+            result.push('withdraw');
+          }
+        }
+
+        if (gs.hasRole('sn_bloodbanker.branchmanager') && isSameBranch && currentStatus === 'pending') {
+          result.push('approve');
+          result.push('reject');
+        }
+      }
+    }
+
+    return new global.JSON().encode(result);
+  },
+
+  type: 'BloodbankerStatusControl'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-09 05:54:20</sys_created_on>
+        <sys_id>13ec8669ff7022106a5affffffffff01</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>BloodbankerStatusControl</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_script_include_13ec8669ff7022106a5affffffffff01</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-09 06:17:07</sys_updated_on>
+    </sys_script_include>
+</record_update>
