@@ -4,15 +4,15 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-04-04 11:31:51</sys_created_on>
         <sys_id>a2aced08fffc62106a5affffffffff82</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>sn_bloodbanker_request.sn_bloodbanker.user</sys_name>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>sn_bloodbanker_request.sn_bloodbanker.donor</sys_name>
         <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
         <sys_policy/>
         <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
         <sys_security_acl display_value="sn_bloodbanker_request">6aaced08fffc62106a5affffffffff7e</sys_security_acl>
         <sys_update_name>sys_security_acl_role_a2aced08fffc62106a5affffffffff82</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-04-08 05:23:46</sys_updated_on>
-        <sys_user_role display_value="sn_bloodbanker.user" name="sn_bloodbanker.user">205db89dff38e2106a5affffffffffd5</sys_user_role>
+        <sys_updated_on>2025-04-10 08:34:07</sys_updated_on>
+        <sys_user_role display_value="sn_bloodbanker.donor" name="sn_bloodbanker.donor">19139872ff2022106a5affffffffff8d</sys_user_role>
     </sys_security_acl_role>
 </record_update>
