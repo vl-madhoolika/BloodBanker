@@ -4,83 +4,83 @@
             <element>branch_id</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-04-02 07:12:02</sys_created_on>
-            <sys_id>110eda57ff6c22106a5affffffffff87</sys_id>
+            <sys_created_on>2025-04-10 17:31:50</sys_created_on>
+            <sys_id>5e98f1c2ffb822106a5affffffffff18</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_bloodbanker_blood_inventory" sys_domain="global" view="Default view">5a0b4abeffa022106a5affffffffffcf</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-04-02 07:12:02</sys_updated_on>
+            <sys_updated_on>2025-04-10 17:31:50</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>inventory_unit</element>
+            <element>quantity_val</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-04-02 07:12:02</sys_created_on>
-            <sys_id>190eda57ff6c22106a5affffffffff87</sys_id>
+            <sys_created_on>2025-04-10 17:31:50</sys_created_on>
+            <sys_id>5298f1c2ffb822106a5affffffffffd4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_bloodbanker_blood_inventory" sys_domain="global" view="Default view">5a0b4abeffa022106a5affffffffffcf</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-04-02 07:12:02</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>quantity</element>
-            <position>2</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-04-02 07:12:02</sys_created_on>
-            <sys_id>110eda57ff6c22106a5affffffffff88</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="sn_bloodbanker_blood_inventory" sys_domain="global" view="Default view">5a0b4abeffa022106a5affffffffffcf</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-04-02 07:12:02</sys_updated_on>
+            <sys_updated_on>2025-04-10 17:31:50</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>expiration_date</element>
-            <position>3</position>
+            <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-04-02 07:12:02</sys_created_on>
-            <sys_id>190eda57ff6c22106a5affffffffff88</sys_id>
+            <sys_created_on>2025-04-10 17:31:50</sys_created_on>
+            <sys_id>d698f1c2ffb822106a5affffffffffd4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_bloodbanker_blood_inventory" sys_domain="global" view="Default view">5a0b4abeffa022106a5affffffffffcf</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-04-02 07:12:02</sys_updated_on>
+            <sys_updated_on>2025-04-10 17:31:50</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>4</position>
+            <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-04-02 07:12:02</sys_created_on>
-            <sys_id>110eda57ff6c22106a5affffffffff89</sys_id>
+            <sys_created_on>2025-04-10 17:31:50</sys_created_on>
+            <sys_id>5e98f1c2ffb822106a5affffffffffd4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_bloodbanker_blood_inventory" sys_domain="global" view="Default view">5a0b4abeffa022106a5affffffffffcf</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-04-02 07:12:02</sys_updated_on>
+            <sys_updated_on>2025-04-10 17:31:50</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>blood_type_focus</element>
-            <position>5</position>
+            <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-04-02 07:12:02</sys_created_on>
-            <sys_id>190eda57ff6c22106a5affffffffff89</sys_id>
+            <sys_created_on>2025-04-10 17:31:50</sys_created_on>
+            <sys_id>d298f1c2ffb822106a5affffffffffd5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_bloodbanker_blood_inventory" sys_domain="global" view="Default view">5a0b4abeffa022106a5affffffffffcf</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-04-02 07:12:02</sys_updated_on>
+            <sys_updated_on>2025-04-10 17:31:50</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-04-10 17:31:50</sys_created_on>
+            <sys_id>5a98f1c2ffb822106a5affffffffffd5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_bloodbanker_blood_inventory" sys_domain="global" view="Default view">5a0b4abeffa022106a5affffffffffcf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-04-10 17:31:50</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

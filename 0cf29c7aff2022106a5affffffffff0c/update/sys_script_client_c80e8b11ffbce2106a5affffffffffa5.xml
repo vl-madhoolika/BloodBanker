@@ -10,46 +10,31 @@
         <messages/>
         <name>Auto Populate Request Form</name>
         <order/>
-        <script><![CDATA[// function onLoad() {
-//   var ga = new GlideAjax('BloodbankerUserService');
-//   ga.addParam('sysparm_name', 'getUserInfo');
-//   ga.getXMLAnswer(function(response) {
-//     try {
-//       var data = JSON.parse(response);
-//       if (data) {
-//         if (data.sys_id) {
-//           g_form.setValue('user', data.sys_id);
-//         }
-//         if (data.blood_type) {
-//           g_form.setValue('blood_type', data.blood_type);
-//         }
-//         if (data.branch_id) {
-//           g_form.setValue('branch', data.branch_id);
-//         }
-//       }
-//     } catch (e) {
-//       console.error("Error parsing response: ", e);
-//     }
-//   });
-// }
-
-function onLoad() {
+        <script><![CDATA[function onLoad() {
   var ga = new GlideAjax('BloodbankerUserService');
   ga.addParam('sysparm_name', 'getUserInfo');
   ga.getXMLAnswer(function(response) {
     var userData = JSON.parse(response);
-    if (userData.sys_id) {
+
+    // Ensure we don't overwrite the donor's data with branch manager data
+    var user = g_form.getValue('user');
+    var bloodType = g_form.getValue('blood_type');
+    var branch = g_form.getValue('branch');
+    
+    // Only auto-populate if fields are empty
+    if (!user && userData.sys_id) {
       g_form.setValue('user', userData.sys_id);
     }
-    if (userData.blood_type) {
+
+    if (!bloodType && userData.blood_type) {
       g_form.setValue('blood_type', userData.blood_type);
     }
-    if (userData.branch_id) {
+
+    if (!branch && userData.branch_id) {
       g_form.setValue('branch', userData.branch_id);
     }
   });
 }
-
 ]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -57,7 +42,7 @@ function onLoad() {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c80e8b11ffbce2106a5affffffffffa5</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Auto Populate Request Form</sys_name>
         <sys_overrides/>
         <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
@@ -65,7 +50,7 @@ function onLoad() {
         <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
         <sys_update_name>sys_script_client_c80e8b11ffbce2106a5affffffffffa5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-04-10 08:27:38</sys_updated_on>
+        <sys_updated_on>2025-04-11 07:03:54</sys_updated_on>
         <table>sn_bloodbanker_request</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

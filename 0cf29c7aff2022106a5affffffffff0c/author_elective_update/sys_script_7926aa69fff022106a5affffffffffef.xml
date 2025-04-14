@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_bloodbanker_request</collection>
+        <condition>current.status.changes()</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Inventory Sync Collection or Fullfill</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+  var bloodType = current.bloodt_type;
+  var branch = current.branch;
+  var quantity = parseInt(current.quantity || 0);
+
+  if (!bloodType || !branch || quantity <= 0) {
+    gs.warn('Inventory sync skipped: Missing blood type, branch, or quantity for request: ' + current.number);
+    return;
+  }
+
+  var invGR = new GlideRecord('sn_bloodbanker_inventory');
+  invGR.addQuery('branch', branch);
+  invGR.addQuery('bloodt_type', bloodType);
+  invGR.query();
+
+  var inventoryExists = invGR.next();
+
+  // Add on collection
+  if (current.status == 'collected' && previous.status != 'collected') {
+    if (inventoryExists) {
+      invGR.units_available = parseInt(invGR.units_available || 0) + quantity;
+      invGR.update();
+    } else {
+      invGR.initialize();
+      invGR.branch = branch;
+      invGR.bloodt_type = bloodType;
+      invGR.units_available = quantity;
+      invGR.insert();
+    }
+  }
+
+// reduce on fullfullied
+  if (current.status == 'fulfilled' && previous.status != 'fulfilled') {
+    if (inventoryExists) {
+      invGR.units_available = Math.max(0, parseInt(invGR.units_available || 0) - quantity);
+      invGR.update();
+    } else {
+      gs.warn('No inventory to fulfill request ' + current.number + ' at branch ' + branch);
+    }
+  }
+
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-09 07:38:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7926aa69fff022106a5affffffffffef</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Inventory Sync Collection or Fullfill</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_script_7926aa69fff022106a5affffffffffef</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-10 17:27:12</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=7926aa69fff022106a5affffffffffef"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</application>
+        <file_path/>
+        <instance_id>32d9ab945d502210958bd8da217c4512</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_script_7926aa69fff022106a5affffffffffef</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;sn_bloodbanker_request&lt;/collection&gt;&lt;condition&gt;current.status.changes()&lt;/condition&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Inventory Sync Collection or Fullfill&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+  var bloodType = current.bloodt_type;
+  var branch = current.branch;
+  var quantity = parseInt(current.quantity || 0);
+
+  if (!bloodType || !branch || quantity &lt;= 0) {
+    gs.warn('Inventory sync skipped: Missing blood type, branch, or quantity for request: ' + current.number);
+    return;
+  }
+
+  var invGR = new GlideRecord('sn_bloodbanker_inventory');
+  invGR.addQuery('branch', branch);
+  invGR.addQuery('bloodt_type', bloodType);
+  invGR.query();
+
+  var inventoryExists = invGR.next();
+
+  // Add on collection
+  if (current.status == 'collected' &amp;&amp; previous.status != 'collected') {
+    if (inventoryExists) {
+      invGR.units_available = parseInt(invGR.units_available || 0) + quantity;
+      invGR.update();
+    } else {
+      invGR.initialize();
+      invGR.branch = branch;
+      invGR.bloodt_type = bloodType;
+      invGR.units_available = quantity;
+      invGR.insert();
+    }
+  }
+
+// reduce on fullfullied
+  if (current.status == 'fulfilled' &amp;&amp; previous.status != 'fulfilled') {
+    if (inventoryExists) {
+      invGR.units_available = Math.max(0, parseInt(invGR.units_available || 0) - quantity);
+      invGR.update();
+    } else {
+      gs.warn('No inventory to fulfill request ' + current.number + ' at branch ' + branch);
+    }
+  }
+
+})(current, previous);
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-04-09 07:38:09&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;7926aa69fff022106a5affffffffffef&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Inventory Sync Collection or Fullfill&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="BloodBanker" source="sn_bloodbanker"&gt;0cf29c7aff2022106a5affffffffff0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BloodBanker"&gt;0cf29c7aff2022106a5affffffffff0c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_7926aa69fff022106a5affffffffffef&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-04-10 17:27:12&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=7926aa69fff022106a5affffffffffef"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1665019570</payload_hash>
+        <record_name>Inventory Sync Collection or Fullfill</record_name>
+        <reverted_from/>
+        <source>8ae70d5dff78e2106a5affffffffff84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-10 17:27:12</sys_created_on>
+        <sys_id>22873d42ffb822106a5afffffffffff5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19620bdcf440000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-10 17:27:12</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>26873d425bb82210c26812d11675d1f4</update_guid>
+        <update_guid_history>26873d425bb82210c26812d11675d1f4:1665019570,24d3714e6b782210a931abd40b062c9c:-1856045164,b3016c422134221071071307d5f7ac2c:1665019570,5b958761517422105e589d64cf88f978:-1659562823,2c35766d2bf02210af67cd66d41a6f04:-1401939442,d4272ea9a2f0221029749e73ceac90e1:628753640</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-10 17:32:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>0b47e734f729472b990e44d142373281</sys_id>
+        <sys_metadata>7926aa69fff022106a5affffffffffef</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Inventory Sync Collection or Fullfill</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_parent display_value="Request">67ac75f2ffa022106a5affffffffffd5</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_scope_delete display_value="">15eb4780ab3c40378274b73cec9ac5c1</sys_scope_delete>
+        <sys_update_name>sys_script_7926aa69fff022106a5affffffffffef</sys_update_name>
+        <sys_update_version display_value="sys_script_7926aa69fff022106a5affffffffffef">22873d42ffb822106a5afffffffffff5</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-10 17:32:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

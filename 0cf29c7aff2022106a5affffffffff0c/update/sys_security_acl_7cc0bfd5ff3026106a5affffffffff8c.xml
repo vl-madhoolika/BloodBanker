@@ -7,7 +7,7 @@
         <condition/>
         <controlled_by_refs/>
         <decision_type>allow</decision_type>
-        <description>Allow write for status in sn_bloodbanker_request, for users with roles (sn_bloodbanker.branchmanager, sn_bloodbanker.user), and if the ACL script returns true.</description>
+        <description>Allow write for status in sn_bloodbanker_request, for users with roles (sn_bloodbanker.branchmanager, sn_bloodbanker.donor), and if the ACL script returns true.</description>
         <local_or_existing>Local</local_or_existing>
         <name>sn_bloodbanker_request.status</name>
         <operation display_value="write">write</operation>
@@ -35,27 +35,56 @@
 //   return gs.hasRole('sn_bloodbanker.admin');
 // })();
 
+// (function() {
+//   var userGR = new GlideRecord('sn_bloodbanker_user');
+//   userGR.addQuery('user_id', gs.getUserID());
+//   userGR.query();
+
+//   if (userGR.next()) {
+//     // Donor/recipient can edit their own pending requests
+//     if ((gs.hasRole('sn_bloodbanker.donor') || gs.hasRole('sn_bloodbanker.recipient')) &&
+//         current.status == 'pending' &&
+//         current.user == userGR.sys_id) {
+//       return true;
+//     }
+
+//     // Branch manager can approve/reject pending requests from their branch
+//     if (gs.hasRole('sn_bloodbanker.branchmanager') &&
+//         current.status == 'pending' &&
+//         current.branch == userGR.branch_id) {
+//       return true;
+//     }
+//   }
+
+//   return gs.hasRole('sn_bloodbanker.admin');
+// })();
+
 (function() {
   var userGR = new GlideRecord('sn_bloodbanker_user');
   userGR.addQuery('user_id', gs.getUserID());
   userGR.query();
 
   if (userGR.next()) {
-    // Donor/recipient can edit their own pending requests
-    if ((gs.hasRole('sn_bloodbanker.donor') || gs.hasRole('sn_bloodbanker.recipient')) &&
-        current.status == 'pending' &&
-        current.user == userGR.sys_id) {
+    var isDonorOrRecipient = gs.hasRole('sn_bloodbanker.donor') || gs.hasRole('sn_bloodbanker.recipient');
+    var isBranchManager = gs.hasRole('sn_bloodbanker.branchmanager');
+
+    // Donor/recipient can withdraw their pending requests
+    if (isDonorOrRecipient && current.status == 'pending' && current.user == userGR.sys_id) {
       return true;
     }
 
-    // Branch manager can approve/reject pending requests from their branch
-    if (gs.hasRole('sn_bloodbanker.branchmanager') &&
-        current.status == 'pending' &&
-        current.branch == userGR.branch_id) {
+    // Branch manager can approve/reject pending requests
+    if (isBranchManager && current.status == 'pending' && current.branch == userGR.branch_id) {
+      return true;
+    }
+
+    // Branch manager can mark requests as collected after approval
+    if (isBranchManager && current.status == 'approved' && current.branch == userGR.branch_id) {
       return true;
     }
   }
 
+  // Admin can always edit
   return gs.hasRole('sn_bloodbanker.admin');
 })();
 ]]></script>
@@ -64,14 +93,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-04-08 18:23:00</sys_created_on>
         <sys_id>7cc0bfd5ff3026106a5affffffffff8c</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>sn_bloodbanker_request.status</sys_name>
         <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
         <sys_policy/>
         <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
         <sys_update_name>sys_security_acl_7cc0bfd5ff3026106a5affffffffff8c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-04-09 08:47:35</sys_updated_on>
+        <sys_updated_on>2025-04-10 12:39:41</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

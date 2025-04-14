@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>sn_bloodbanker.InventoryManager</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>InventoryManager</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var InventoryManager = Class.create();
+InventoryManager.prototype = {
+    initialize: function() {},
+
+    fulfillRequest: function(request) {
+        var totalNeeded = parseInt(request.quantity, 10);  
+        var deducted = 0;
+
+        var fifo = new GlideRecord('sn_bloodbanker_blood_inventory');
+        fifo.addQuery('branch_id', request.branch);
+        fifo.addQuery('blood_type_focus', request.blood_type);
+        fifo.addQuery('expiration_date', '>=', new GlideDateTime()); 
+        fifo.orderBy('expiration_date');
+        fifo.query();
+
+        while (fifo.next() && totalNeeded > 0) {
+            var available = parseInt(fifo.quantity_val, 10);
+            if (available >= totalNeeded) {
+                fifo.quantity_val -= totalNeeded;
+                fifo.update();
+                deducted += totalNeeded;
+                totalNeeded = 0;
+            } else {
+                fifo.quantity_val = 0;
+                fifo.update();
+                deducted += available;
+                totalNeeded -= available;
+            }
+        }
+
+        return totalNeeded;  // Returns any remaining need
+    },
+
+    type: 'InventoryManager'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-14 02:32:17</sys_created_on>
+        <sys_id>10b09f0fff7862106a5affffffffffa5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>InventoryManager</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_script_include_10b09f0fff7862106a5affffffffffa5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-14 02:32:17</sys_updated_on>
+    </sys_script_include>
+</record_update>

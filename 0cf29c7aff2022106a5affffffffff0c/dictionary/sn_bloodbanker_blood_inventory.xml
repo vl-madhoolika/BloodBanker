@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="2b138ebaffa022106a5affffffffff0e" label="Blood Inventory" max_length="40" name="sn_bloodbanker_blood_inventory" type="collection">
-        <element choice="3" label="Blood Type" max_length="40" name="blood_type_focus" type="choice">
+        <element choice="3" label="Blood Type" mandatory="true" max_length="40" name="blood_type_focus" type="choice">
             <choice>
                 <element inactive_on_update="false" label="O-" sequence="5" value="o_negative"/>
                 <element inactive_on_update="false" label="A-" sequence="1" value="a_negative"/>
-                <element inactive_on_update="false" label="B" sequence="2" value="b_positive"/>
-                <element inactive_on_update="false" label="AB" sequence="6" value="ab_positive"/>
+                <element inactive_on_update="false" label="B+" sequence="2" value="b_positive"/>
+                <element inactive_on_update="false" label="AB+" sequence="6" value="ab_positive"/>
                 <element inactive_on_update="false" label="B-" sequence="3" value="b_negative"/>
                 <element inactive_on_update="false" label="AB-" sequence="7" value="ab_negative"/>
-                <element inactive_on_update="false" label="A" sequence="0" value="a_positive"/>
-                <element inactive_on_update="false" label="O" sequence="4" value="o_positive"/>
+                <element inactive_on_update="false" label="A+" sequence="0" value="a_positive"/>
+                <element inactive_on_update="false" label="O+" sequence="4" value="o_positive"/>
             </choice>
         </element>
-        <element label="Quantity" max_length="40" name="quantity" type="string"/>
-        <element label="Expiration Date" max_length="40" name="expiration_date" type="glide_date"/>
-        <element label="Branch ID" max_length="32" name="branch_id" reference="sn_bloodbanker_branch" type="reference"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Inventory Unit ID" max_length="40" name="number" type="string"/>
+        <element label="Expiration Date" mandatory="true" max_length="40" name="expiration_date" type="glide_date"/>
+        <element label="Branch ID" mandatory="true" max_length="32" name="branch_id" reference="sn_bloodbanker_branch" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Inventory Unit ID" mandatory="true" max_length="40" name="number" type="string"/>
+        <element label="Is Expired" max_length="40" name="is_expired" type="boolean"/>
+        <element label="Quantity" mandatory="true" max_length="255" name="quantity_val" type="integer"/>
         <index name="index">
             <element name="branch_id"/>
         </index>

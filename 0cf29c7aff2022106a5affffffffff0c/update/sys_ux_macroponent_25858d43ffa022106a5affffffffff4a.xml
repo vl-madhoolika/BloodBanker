@@ -1338,7 +1338,7 @@
                                                 "name": "blood_type",
                                                 "readonly": true,
                                                 "type": "choice",
-                                                "value": "{data.userDetails.blood_type}",
+                                                "value": "${data.userDetails.blood_type}",
                                                 "visible": true
                                             },
                                             "branch": {
@@ -1350,13 +1350,53 @@
                                                 "type": "reference",
                                                 "visible": true
                                             },
+                                            "collection_date": {
+                                                "label": "Collection Date",
+                                                "mandatory": true,
+                                                "name": "collection_date",
+                                                "readonly": false,
+                                                "type": "date",
+                                                "value": "${data.collection_date}",
+                                                "visible": true
+                                            },
                                             "quantity": {
                                                 "label": "Quantity",
                                                 "mandatory": true,
                                                 "name": "quantity",
-                                                "readonly": true,
+                                                "readonly": false,
                                                 "type": "integer",
                                                 "value": 1,
+                                                "visible": true
+                                            },
+                                            "status": {
+                                                "choices": [
+                                                    {
+                                                        "label": "Pending",
+                                                        "value": "pending"
+                                                    },
+                                                    {
+                                                        "label": "Approved",
+                                                        "value": "approved"
+                                                    },
+                                                    {
+                                                        "label": "Collected",
+                                                        "value": "collected"
+                                                    },
+                                                    {
+                                                        "label": "Withdrawn",
+                                                        "value": "withdrawn"
+                                                    },
+                                                    {
+                                                        "label": "Rejected",
+                                                        "value": "rejected"
+                                                    }
+                                                ],
+                                                "label": "Status",
+                                                "mandatory": true,
+                                                "name": "status",
+                                                "readonly": false,
+                                                "type": "choice",
+                                                "value": "${data.status}",
                                                 "visible": true
                                             }
                                         }
@@ -3946,6 +3986,9 @@
     }
 ]</props>
         <required_translations>[ {
+  "message" : "Approved",
+  "comment" : ""
+}, {
   "message" : "Blood Donation Details",
   "comment" : ""
 }, {
@@ -3959,6 +4002,12 @@
   "comment" : ""
 }, {
   "message" : "Cancel",
+  "comment" : ""
+}, {
+  "message" : "Collected",
+  "comment" : ""
+}, {
+  "message" : "Collection Date",
   "comment" : ""
 }, {
   "message" : "Details",
@@ -3979,13 +4028,25 @@
   "message" : "Modal header",
   "comment" : ""
 }, {
+  "message" : "Pending",
+  "comment" : ""
+}, {
   "message" : "Quantity",
+  "comment" : ""
+}, {
+  "message" : "Rejected",
   "comment" : ""
 }, {
   "message" : "Request Now",
   "comment" : ""
 }, {
+  "message" : "Status",
+  "comment" : ""
+}, {
   "message" : "Submit",
+  "comment" : ""
+}, {
+  "message" : "Withdrawn",
   "comment" : ""
 }, {
   "message" : "Yes",
@@ -4014,14 +4075,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-04-01 06:06:55</sys_created_on>
         <sys_id>25858d43ffa022106a5affffffffff4a</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>Default</sys_name>
         <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
         <sys_policy/>
         <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
         <sys_update_name>sys_ux_macroponent_25858d43ffa022106a5affffffffff4a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-04-07 06:52:47</sys_updated_on>
+        <sys_updated_on>2025-04-11 08:54:32</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=25858d43ffa022106a5affffffffff4a"/>
 </record_update>

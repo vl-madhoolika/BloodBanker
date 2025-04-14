@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="67ac75f2ffa022106a5affffffffffd5" label="Request" max_length="40" name="sn_bloodbanker_request" type="collection">
-        <element choice="3" label="Status" max_length="40" name="status" type="choice">
+        <element choice="3" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
-                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
-                <element inactive_on_update="false" label="Withdraw" sequence="4" value="withdraw"/>
-                <element inactive_on_update="false" label="Collected" sequence="0"/>
-                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="Withdraw" sequence="2" value="withdraw"/>
+                <element inactive_on_update="false" label="Collected" sequence="3" value="collected"/>
+                <element inactive_on_update="false" label="Rejected" sequence="4" value="rejected"/>
             </choice>
         </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Request ID" max_length="40" name="number" type="string"/>
-        <element choice="3" label="Blood Type" max_length="1024" name="blood_type" type="choice">
+        <element choice="3" label="Blood Type" mandatory="true" max_length="1024" name="blood_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="B+" sequence="2" value="b"/>
                 <element inactive_on_update="false" label="AB-" sequence="7" value="ab_negative"/>
@@ -30,16 +30,16 @@
             </choice>
         </element>
         <element label="Expiration Date" max_length="40" name="expiration_date" type="glide_date"/>
-        <element label="Quantity" max_length="40" name="quantity" type="integer"/>
-        <element label="Donation Date" max_length="40" name="donation_date" type="glide_date"/>
-        <element label="Request Type" max_length="40" name="request_type" type="choice">
+        <element label="Quantity" mandatory="true" max_length="40" name="quantity" type="integer"/>
+        <element label="Booking Date" max_length="40" name="donation_date" type="glide_date"/>
+        <element label="Request Type" mandatory="true" max_length="40" name="request_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Donate" sequence="0" value="donate"/>
                 <element inactive_on_update="false" label="Request" sequence="1" value="request"/>
             </choice>
         </element>
-        <element label="Branch" max_length="32" name="branch" reference="sn_bloodbanker_branch" type="reference"/>
-        <element label="User" max_length="32" name="user" reference="sn_bloodbanker_user" type="reference"/>
+        <element label="Branch" mandatory="true" max_length="32" name="branch" reference="sn_bloodbanker_branch" type="reference"/>
+        <element label="User" mandatory="true" max_length="32" name="user" reference="sn_bloodbanker_user" type="reference"/>
         <element label="Collection Date" max_length="40" name="collection_date" type="glide_date"/>
         <index name="index">
             <element name="branch"/>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <bundles>[]</bundles>
+        <category>page</category>
+        <component_dependencies/>
+        <composition>[
+    {
+        "definition": {
+            "id": "cdf8d604a3fda59e69ccd6dd407263d6",
+            "type": "MACROPONENT"
+        },
+        "elementId": "form_1",
+        "elementLabel": "Form 1",
+        "eventMappings": [],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "preset": null,
+        "propertyValues": {
+            "config": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "disableCollapse": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "encodedRecord": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "fields": {
+                "type": "JSON_LITERAL",
+                "value": {
+                    "blood_type": {
+                        "label": "Blood Type",
+                        "mandatory": true,
+                        "name": "blood_type",
+                        "readonly": false,
+                        "type": "choice",
+                        "visible": true
+                    },
+                    "branch": {
+                        "label": "Branch",
+                        "mandatory": true,
+                        "name": "branch",
+                        "readonly": true,
+                        "reference": "sn_bloodbanker_branch",
+                        "type": "reference",
+                        "visible": true
+                    },
+                    "collection_date": {
+                        "label": "Collection Date",
+                        "mandatory": false,
+                        "name": "collection_date",
+                        "readonly": false,
+                        "type": "date",
+                        "visible": true
+                    },
+                    "donation_date": {
+                        "label": "Donation Date",
+                        "mandatory": false,
+                        "name": "donation_date",
+                        "readonly": false,
+                        "type": "date",
+                        "visible": true
+                    },
+                    "expiration_date": {
+                        "label": "Expiration Date",
+                        "mandatory": false,
+                        "name": "expiration_date",
+                        "readonly": true,
+                        "type": "date",
+                        "visible": true
+                    },
+                    "quantity": {
+                        "label": "Quantity",
+                        "mandatory": true,
+                        "name": "quantity",
+                        "readonly": false,
+                        "type": "integer",
+                        "visible": true
+                    },
+                    "request_type": {
+                        "label": "Request Type",
+                        "mandatory": true,
+                        "name": "request_type",
+                        "readonly": false,
+                        "type": "choice",
+                        "visible": true
+                    },
+                    "status": {
+                        "label": "Status",
+                        "mandatory": true,
+                        "name": "status",
+                        "readonly": true,
+                        "type": "choice",
+                        "visible": true
+                    },
+                    "urgency": {
+                        "label": "Urgency",
+                        "mandatory": false,
+                        "name": "urgency",
+                        "readonly": false,
+                        "type": "choice",
+                        "visible": true
+                    },
+                    "user": {
+                        "label": "User",
+                        "mandatory": true,
+                        "name": "user",
+                        "readonly": false,
+                        "reference": "sn_bloodbanker_user",
+                        "type": "reference",
+                        "visible": true
+                    }
+                }
+            },
+            "formMessages": {
+                "type": "JSON_LITERAL",
+                "value": []
+            },
+            "inRecordPageTab": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "inUiBuilder": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "isContextMenuHidden": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "isFirstSectionTitleHidden": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "isFormOptionsHidden": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "isRemovePaddingLeft": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "isSectionMenuHidden": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "isSectionTitleHidden": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "isViewSectionHidden": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "landmark": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "nowDsDomainId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "nowDsDomainScope": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "nowDsRecordId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "nowDsRecordTable": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "recordMembers": {
+                "type": "JSON_LITERAL",
+                "value": []
+            },
+            "relatedLists": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "scrollableHost": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "sectionHeadingLevel": {
+                "type": "JSON_LITERAL",
+                "value": "2"
+            },
+            "sections": {
+                "type": "JSON_LITERAL",
+                "value": [
+                    {
+                        "caption": "Request Info",
+                        "captionDisplay": "Request Info",
+                        "defaultSection": true,
+                        "expanded": true,
+                        "id": 0,
+                        "label": "Request Info",
+                        "rows": [
+                            [
+                                {
+                                    "fields": [
+                                        "user",
+                                        "blood_type",
+                                        "branch"
+                                    ]
+                                },
+                                {
+                                    "fields": [
+                                        "request_type",
+                                        "quantity",
+                                        "urgency"
+                                    ]
+                                }
+                            ]
+                        ],
+                        "sysId": "section-request-info"
+                    },
+                    {
+                        "caption": "Collection Info",
+                        "captionDisplay": "Collection Info",
+                        "defaultSection": false,
+                        "expanded": true,
+                        "id": 1,
+                        "label": "Collection Info",
+                        "rows": [
+                            [
+                                {
+                                    "fields": [
+                                        "status",
+                                        "donation_date"
+                                    ]
+                                },
+                                {
+                                    "fields": [
+                                        "collection_date",
+                                        "expiration_date"
+                                    ]
+                                }
+                            ]
+                        ],
+                        "sysId": "section-collection-info"
+                    }
+                ]
+            },
+            "serializedChanges": {
+                "type": "JSON_LITERAL",
+                "value": []
+            },
+            "sysId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "sn_bloodbanker_request"
+            },
+            "userSession": {
+                "binding": {
+                    "address": [
+                        "user"
+                    ],
+                    "category": "session"
+                },
+                "type": "CONTEXT_BINDING"
+            },
+            "view": {
+                "type": "JSON_LITERAL",
+                "value": null
+            }
+        },
+        "slot": null,
+        "styles": null
+    }
+]</composition>
+        <da_relay_models/>
+        <data>[]</data>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <dispatched_events/>
+        <ext_controller_dep/>
+        <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <extension_point/>
+        <form_factors>{
+    "custom_ff_1": {
+        "max-width": 640,
+        "reference": "macroponent"
+    }
+}</form_factors>
+        <handled_events/>
+        <interactions/>
+        <interfaces/>
+        <internal_event_mappings>{}</internal_event_mappings>
+        <layout>{
+    "default": {
+        "children": null,
+        "items": [
+            {
+                "element_id": "form_1"
+            }
+        ],
+        "root": null,
+        "rules": null,
+        "styles": {
+            "flex-direction": "column"
+        },
+        "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+        "type": "flex"
+    },
+    "queries": [
+        {
+            "layout": {
+                "items": [],
+                "styles": {
+                    "flex-direction": "column",
+                    "height": "auto",
+                    "min-width": null
+                },
+                "type": "flex"
+            },
+            "queryId": "custom_ff_1"
+        }
+    ],
+    "version": "3.1.0"
+}</layout>
+        <macroponent_dependencies/>
+        <name>Request Donation Form</name>
+        <output_prop_mapping/>
+        <props>[]</props>
+        <required_translations>[ {
+  "message" : "Blood Type",
+  "comment" : ""
+}, {
+  "message" : "Branch",
+  "comment" : ""
+}, {
+  "message" : "Collection Date",
+  "comment" : ""
+}, {
+  "message" : "Collection Info",
+  "comment" : ""
+}, {
+  "message" : "Donation Date",
+  "comment" : ""
+}, {
+  "message" : "Expiration Date",
+  "comment" : ""
+}, {
+  "message" : "Quantity",
+  "comment" : ""
+}, {
+  "message" : "Request Info",
+  "comment" : ""
+}, {
+  "message" : "Request Type",
+  "comment" : ""
+}, {
+  "message" : "Status",
+  "comment" : ""
+}, {
+  "message" : "Urgency",
+  "comment" : ""
+}, {
+  "message" : "User",
+  "comment" : ""
+} ]</required_translations>
+        <root_component/>
+        <root_component_config/>
+        <root_component_definition/>
+        <schema_version>1.0.0</schema_version>
+        <state_persistence_config/>
+        <state_properties>[
+    {
+        "id": "AE6QpvoAAEpB43NcD0G47siStm",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "name": "newClientStateParam1",
+        "shape": "",
+        "valueType": "string"
+    }
+]</state_properties>
+        <style_config>{}</style_config>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-14 01:50:27</sys_created_on>
+        <sys_id>bb77cb43ff7862106a5affffffffffa9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Request Donation Form</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_ux_macroponent_bb77cb43ff7862106a5affffffffffa9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-14 02:17:40</sys_updated_on>
+    </sys_ux_macroponent>
+    <sys_translated_text action="delete_multiple" query="documentkey=bb77cb43ff7862106a5affffffffffa9"/>
+</record_update>
