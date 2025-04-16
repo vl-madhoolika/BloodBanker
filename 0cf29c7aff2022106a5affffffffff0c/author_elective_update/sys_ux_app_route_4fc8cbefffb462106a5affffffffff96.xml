@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="BloodBanker">2bdf8676ffe022106a5affffffffff10</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>Requestlist</name>
+        <optional_parameters>listId</optional_parameters>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>requestlist</route_type>
+        <screen_type display_value="Requestlist">cbc8cbefffb462106a5affffffffff93</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 15:13:06</sys_created_on>
+        <sys_id>4fc8cbefffb462106a5affffffffff96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Requestlist</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_ux_app_route_4fc8cbefffb462106a5affffffffff96</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 15:13:06</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=4fc8cbefffb462106a5affffffffff96"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</application>
+        <file_path/>
+        <instance_id>32d9ab945d502210958bd8da217c4512</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_ux_app_route_4fc8cbefffb462106a5affffffffff96</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="BloodBanker">2bdf8676ffe022106a5affffffffff10</app_config><description/><extension_point/><fields/><icon/><name>Requestlist</name><optional_parameters>listId</optional_parameters><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><parent_macroponent_composition_element_id/><route_type>requestlist</route_type><screen_type display_value="Requestlist">cbc8cbefffb462106a5affffffffff93</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-04-15 15:13:06</sys_created_on><sys_id>4fc8cbefffb462106a5affffffffff96</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Requestlist</sys_name><sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package><sys_policy/><sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope><sys_update_name>sys_ux_app_route_4fc8cbefffb462106a5affffffffff96</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-04-15 15:13:06</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=4fc8cbefffb462106a5affffffffff96"/></record_update>]]></payload>
+        <payload_hash>1782044293</payload_hash>
+        <record_name>Requestlist</record_name>
+        <reverted_from/>
+        <source>8ae70d5dff78e2106a5affffffffff84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 15:13:06</sys_created_on>
+        <sys_id>8bc8cbefffb462106a5affffffffff99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1963a02d6b50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 15:13:06</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>4fc8cbef60b46210014fa8f272a0b398</update_guid>
+        <update_guid_history>4fc8cbef60b46210014fa8f272a0b398:1782044293</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 15:18:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>137b520eb6a8410788e0568d40a86129</sys_id>
+        <sys_metadata>4fc8cbefffb462106a5affffffffff96</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Requestlist</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_scope_delete display_value="">15eb4780ab3c40378274b73cec9ac5c1</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_4fc8cbefffb462106a5affffffffff96</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_4fc8cbefffb462106a5affffffffff96">8bc8cbefffb462106a5affffffffff99</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 15:18:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

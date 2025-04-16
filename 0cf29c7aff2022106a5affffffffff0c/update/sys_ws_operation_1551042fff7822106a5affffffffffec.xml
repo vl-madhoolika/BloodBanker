@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>Get Current User Dashboard Data</name>
+        <operation_script><![CDATA[(function process(request, response) {
+  var userID = gs.getUserID();
+  var result = {
+    total_requests: 0,
+    total_donations: 0,
+    pending_requests: 0,
+    request_trend: []
+  };
+
+  // Total requests
+  var gr1 = new GlideAggregate('sn_bloodbanker_request');
+  gr1.addQuery('user.user_id', userID);
+  gr1.addAggregate('COUNT');
+  gr1.query();
+  if (gr1.next()) {
+    result.total_requests = parseInt(gr1.getAggregate('COUNT'));
+  }
+
+  // Total donations
+  var gr2 = new GlideAggregate('sn_bloodbanker_request');
+  gr2.addQuery('user.user_id', userID);
+  gr2.addQuery('request_type', 'donation');
+  gr2.addAggregate('COUNT');
+  gr2.query();
+  if (gr2.next()) {
+    result.total_donations = parseInt(gr2.getAggregate('COUNT'));
+  }
+
+  // Pending requests
+  var gr3 = new GlideAggregate('sn_bloodbanker_request');
+  gr3.addQuery('user.user_id', userID);
+  gr3.addQuery('status', 'pending');
+  gr3.addAggregate('COUNT');
+  gr3.query();
+  if (gr3.next()) {
+    result.pending_requests = parseInt(gr3.getAggregate('COUNT'));
+  }
+
+  // Trend data (by date + type)
+  var trendGR = new GlideAggregate('sn_bloodbanker_request');
+  trendGR.addQuery('user.user_id', userID);
+  trendGR.addNotNullQuery('sys_created_on');
+  trendGR.addAggregate('COUNT');
+  trendGR.groupBy('sys_created_on');
+  trendGR.groupBy('request_type');
+  trendGR.orderBy('sys_created_on');
+  trendGR.query();
+  while (trendGR.next()) {
+    result.request_trend.push({
+      date: trendGR.getDisplayValue('sys_created_on'),
+      type: trendGR.getValue('request_type'),
+      count: parseInt(trendGR.getAggregate('COUNT'))
+    });
+  }
+
+  response.setContentType('application/json');
+  response.setBody(result);
+})(request, response);
+]]></operation_script>
+        <operation_uri>/api/sn_bloodbanker/get_donor_dashboard_data</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 00:43:15</sys_created_on>
+        <sys_id>1551042fff7822106a5affffffffffec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Current User Dashboard Data</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_ws_operation_1551042fff7822106a5affffffffffec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 00:43:15</sys_updated_on>
+        <web_service_definition display_value="Get Donor Dashboard Data">8531802fff7822106a5affffffffff43</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

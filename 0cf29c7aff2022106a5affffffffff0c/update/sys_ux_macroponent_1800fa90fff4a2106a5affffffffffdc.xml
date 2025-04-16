@@ -2145,108 +2145,6 @@
             "composition": [
                 {
                     "definition": {
-                        "id": "a04c00820f901010a326b6ade7767ef9",
-                        "type": "MACROPONENT"
-                    },
-                    "elementId": "record_tabs_1",
-                    "elementLabel": "Record Tabs 1",
-                    "eventMappings": [],
-                    "isHidden": {
-                        "type": "JSON_LITERAL",
-                        "value": null
-                    },
-                    "preset": null,
-                    "propertyValues": {
-                        "detailsProps": {
-                            "type": "JSON_LITERAL",
-                            "value": null
-                        },
-                        "disableCollapse": {
-                            "type": "JSON_LITERAL",
-                            "value": false
-                        },
-                        "extraParams": {
-                            "type": "JSON_LITERAL",
-                            "value": null
-                        },
-                        "formMessages": {
-                            "type": "JSON_LITERAL",
-                            "value": null
-                        },
-                        "isContextMenuHidden": {
-                            "type": "JSON_LITERAL",
-                            "value": false
-                        },
-                        "isFormOptionsHidden": {
-                            "type": "JSON_LITERAL",
-                            "value": false
-                        },
-                        "isInitialPageLoad": {
-                            "type": "JSON_LITERAL",
-                            "value": false
-                        },
-                        "isRemovePaddingLeft": {
-                            "type": "JSON_LITERAL",
-                            "value": false
-                        },
-                        "isSectionMenuHidden": {
-                            "type": "JSON_LITERAL",
-                            "value": false
-                        },
-                        "isSectionTitleHidden": {
-                            "type": "JSON_LITERAL",
-                            "value": false
-                        },
-                        "isViewSectionHidden": {
-                            "type": "JSON_LITERAL",
-                            "value": false
-                        },
-                        "query": {
-                            "type": "JSON_LITERAL",
-                            "value": ""
-                        },
-                        "relatedListRefreshRequests": {
-                            "type": "JSON_LITERAL",
-                            "value": {}
-                        },
-                        "sectionHeadingLevel": {
-                            "type": "JSON_LITERAL",
-                            "value": "2"
-                        },
-                        "selectedTabIndex": {
-                            "type": "JSON_LITERAL",
-                            "value": ""
-                        },
-                        "sysId": {
-                            "type": "JSON_LITERAL",
-                            "value": ""
-                        },
-                        "tabRoutes": {
-                            "type": "JSON_LITERAL",
-                            "value": [
-                                {
-                                    "fields": {
-                                        "details": true
-                                    },
-                                    "label": "Details",
-                                    "route": "details"
-                                }
-                            ]
-                        },
-                        "table": {
-                            "type": "JSON_LITERAL",
-                            "value": ""
-                        },
-                        "userSession": {
-                            "type": "JSON_LITERAL",
-                            "value": ""
-                        }
-                    },
-                    "slot": null,
-                    "styles": null
-                },
-                {
-                    "definition": {
                         "id": "d356d14b6e293a3020a244b63d278d8f",
                         "type": "MACROPONENT"
                     },
@@ -2255,7 +2153,7 @@
                     "eventMappings": [],
                     "isHidden": {
                         "type": "JSON_LITERAL",
-                        "value": null
+                        "value": true
                     },
                     "overrides": {
                         "composition": [
@@ -3202,6 +3100,31 @@
                             }
                         ]
                     }
+                },
+                {
+                    "definition": {
+                        "id": "eee2590820335fa22d8fb7319a825a82",
+                        "type": "MACROPONENT"
+                    },
+                    "elementId": "presentational_list_1",
+                    "elementLabel": "Presentational List 1",
+                    "eventMappings": [],
+                    "isHidden": {
+                        "type": "JSON_LITERAL",
+                        "value": null
+                    },
+                    "preset": {
+                        "controllerElementId": "list_controller_1",
+                        "disabledEventTargetIds": [],
+                        "id": "33f6672f7d096e5a32e4e96b497748e4"
+                    },
+                    "propertyValues": {},
+                    "slot": null,
+                    "styles": {
+                        "default": {
+                            "align-self": "flex-start"
+                        }
+                    }
                 }
             ],
             "layout": {
@@ -3209,10 +3132,10 @@
                     "children": null,
                     "items": [
                         {
-                            "element_id": "record_tabs_1"
+                            "element_id": "grid_container_1"
                         },
                         {
-                            "element_id": "grid_container_1"
+                            "element_id": "presentational_list_1"
                         }
                     ],
                     "root": null,
@@ -3293,6 +3216,152 @@
                 }
             ]
         }
+    },
+    {
+        "definition": {
+            "id": "b685c9c6773ab64a2c11c88564fc9f62",
+            "type": "MACROPONENT"
+        },
+        "elementId": "record_list_header_1",
+        "elementLabel": "Record List Header 1",
+        "eventMappings": [],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "preset": null,
+        "propertyValues": {
+            "actionNodes": {
+                "type": "JSON_LITERAL",
+                "value": {}
+            },
+            "areColumnsPersonalized": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "count": {
+                "type": "JSON_LITERAL",
+                "value": 10
+            },
+            "daModel": {
+                "type": "JSON_LITERAL",
+                "value": {}
+            },
+            "dynamicConditionsListModel": {
+                "type": "JSON_LITERAL",
+                "value": {}
+            },
+            "enableTitleWrap": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "headerAlertConfig": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "headerSize": {
+                "type": "JSON_LITERAL",
+                "value": "md"
+            },
+            "listControllerId": {
+                "type": "JSON_LITERAL",
+                "value": "-"
+            },
+            "listId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "listType": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "liveUpdatesCount": {
+                "type": "JSON_LITERAL",
+                "value": 0
+            },
+            "pageSysId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "query": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "queryConditionCount": {
+                "type": "JSON_LITERAL",
+                "value": 0
+            },
+            "shouldEvaluateDynamicConditions": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "showActionBar": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "showConditionBuilderButton": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "showConditionBuilderPanel": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "showCount": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "showEditColumnsButton": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "showLiveListToggle": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "showPlusSign": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "showRefreshButton": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "showSearchButton": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "showSubtitle": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "showTitle": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "subtitle": {
+                "type": "JSON_LITERAL",
+                "value": "Last refreshed just now"
+            },
+            "table": {
+                "binding": {
+                    "address": [
+                        "gliderecord_query_1",
+                        "output",
+                        "data",
+                        "GlideRecord_Query",
+                        "sn_bloodbanker_request"
+                    ]
+                },
+                "type": "DATA_OUTPUT_BINDING"
+            },
+            "title": {
+                "type": "JSON_LITERAL",
+                "value": "Task"
+            }
+        },
+        "slot": null,
+        "styles": null
     }
 ]</composition>
         <da_relay_models/>
@@ -3321,6 +3390,301 @@
             }
         },
         "readEvaluationMode": "EXPLICIT"
+    },
+    {
+        "definition": {
+            "id": "b997a84053021010cbc2ddeeff7b1228",
+            "type": "COMPOSITE"
+        },
+        "elementId": "look_up_multiple_records_1",
+        "elementLabel": "Look up multiple records 1",
+        "eventMappings": [],
+        "inputValues": {
+            "encodedQuery": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "limit": {
+                "type": "JSON_LITERAL",
+                "value": "1000"
+            },
+            "offset": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "orderBy": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "queryCategory": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "returnFieldMetadata": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "returnFields": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "sortType": {
+                "type": "JSON_LITERAL",
+                "value": "asc"
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "sn_bloodbanker_request"
+            }
+        },
+        "readEvaluationMode": "EAGER"
+    },
+    {
+        "definition": {
+            "id": "54e9c8d25310101024e5ddeeff7b12db",
+            "type": "GRAPHQL"
+        },
+        "elementId": "gliderecord_query_1",
+        "elementLabel": "GlideRecord Query 1",
+        "eventMappings": [],
+        "inputValues": {
+            "recordId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "returnFieldMetadata": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "returnFields": {
+                "type": "JSON_LITERAL",
+                "value": "quantity,request_type,donation_date,branch,number,blood_type,user,status"
+            },
+            "returnTableMetadata": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "sn_bloodbanker_request"
+            }
+        },
+        "readEvaluationMode": "EAGER"
+    },
+    {
+        "definition": {
+            "id": "5865e308432021105571609dc7b8f23b",
+            "type": "CONTROLLER"
+        },
+        "dependencies": {},
+        "elementId": "list_controller_1",
+        "elementLabel": "List Controller 1",
+        "eventMappings": [],
+        "inputValues": {
+            "actionConfigId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "allRecordsSelected": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "childrenRowLimit": {
+                "type": "JSON_LITERAL",
+                "value": 10
+            },
+            "columnFilteringPopoverDisplay": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "columnLimit": {
+                "type": "JSON_LITERAL",
+                "value": 0
+            },
+            "columnPreferenceKey": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "columns": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "currentPage": {
+                "type": "JSON_LITERAL",
+                "value": 0
+            },
+            "enableBadgeCount": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableCellFiltering": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableColumnFiltering": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableColumnGrouping": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableColumnSorting": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableDeclarativeActions": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableDotWalk": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableInfiniteScroll": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "enableLiveList": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "enableQuickEdit": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableQuickFormNavigation": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableReferenceLinks": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enforceViewRulesForQuickForm": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "exceptedRecords": {
+                "type": "JSON_LITERAL",
+                "value": []
+            },
+            "fetchHighlightedValues": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "filter": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "fixedFilter": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "groupBy": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "highlightedValueConfigId": {
+                "binding": {
+                    "address": [
+                        "highlightedValueConfigId"
+                    ],
+                    "category": "app"
+                },
+                "type": "CONTEXT_BINDING"
+            },
+            "listControllerId": {
+                "type": "JSON_LITERAL",
+                "value": "jQNjAfdQAk4U43O8I3vADmgzS"
+            },
+            "listId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "listMenuConfigurationId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "listTitle": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "listType": {
+                "type": "JSON_LITERAL",
+                "value": "default"
+            },
+            "nestBy": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "nowUxfPersistedState": {
+                "type": "JSON_LITERAL",
+                "value": {}
+            },
+            "onlyEnableSelectionWhenRequiredByActions": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "pageSysId": {
+                "binding": {
+                    "address": [
+                        "nowMacroponentSysId"
+                    ],
+                    "category": "props"
+                },
+                "type": "CONTEXT_BINDING"
+            },
+            "parentRecordSysId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "parentTable": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "recordCountLimit": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "relatedListName": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "rowLimit": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "selectedRecords": {
+                "type": "JSON_LITERAL",
+                "value": []
+            },
+            "showListOpenedByLinkSection": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "table": {
+                "type": "JSON_LITERAL",
+                "value": "sn_bloodbanker_request"
+            },
+            "tinyId": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "transformScriptArgs": {
+                "type": "JSON_LITERAL",
+                "value": {}
+            },
+            "transformScriptSysId": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "view": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            }
+        },
+        "readEvaluationMode": "EAGER"
     }
 ]</data>
         <description/>
@@ -3354,6 +3718,9 @@
             },
             {
                 "element_id": "container_2"
+            },
+            {
+                "element_id": "record_list_header_1"
             }
         ],
         "root": null,
@@ -3517,25 +3884,27 @@
     {
         "description": "",
         "fieldType": "string",
-        "id": "aQddVoPeeddKDEKLjjeeddAFewFOclZt",
+        "id": "kLfggrvyFBEdeejjbeeDEeeddDVvjad",
         "inherited": false,
         "label": "",
         "mandatory": false,
         "name": "",
         "readOnly": false,
         "selectable": false,
+        "typeMetadata": null,
         "valueType": "string"
     },
     {
         "description": "",
         "fieldType": "string",
-        "id": "USXUFvOBBEiineeddOaaOYSeehhKexiN",
+        "id": "wWbgpPIffCUgjjjnaaCDwnviiMyv",
         "inherited": false,
         "label": "",
         "mandatory": false,
         "name": "",
         "readOnly": false,
         "selectable": false,
+        "typeMetadata": null,
         "valueType": "string"
     }
 ]</props>
@@ -3553,9 +3922,6 @@
   "comment" : ""
 }, {
   "message" : "Cancel",
-  "comment" : ""
-}, {
-  "message" : "Details",
   "comment" : ""
 }, {
   "message" : "Donate Now",
@@ -3617,14 +3983,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-04-05 11:04:32</sys_created_on>
         <sys_id>1800fa90fff4a2106a5affffffffffdc</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Admin Home Page</sys_name>
         <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
         <sys_policy/>
         <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
         <sys_update_name>sys_ux_macroponent_1800fa90fff4a2106a5affffffffffdc</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-04-07 05:23:24</sys_updated_on>
+        <sys_updated_on>2025-04-15 15:39:35</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=1800fa90fff4a2106a5affffffffffdc"/>
 </record_update>

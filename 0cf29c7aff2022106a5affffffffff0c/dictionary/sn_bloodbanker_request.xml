@@ -32,7 +32,7 @@
         <element label="Expiration Date" max_length="40" name="expiration_date" type="glide_date"/>
         <element label="Quantity" mandatory="true" max_length="40" name="quantity" type="integer"/>
         <element label="Booking Date" max_length="40" name="donation_date" type="glide_date"/>
-        <element label="Request Type" mandatory="true" max_length="40" name="request_type" type="choice">
+        <element default="&#10;" label="Request Type" mandatory="true" max_length="40" name="request_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Donate" sequence="0" value="donate"/>
                 <element inactive_on_update="false" label="Request" sequence="1" value="request"/>

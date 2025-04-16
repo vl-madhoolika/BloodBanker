@@ -3,32 +3,34 @@
         <choices/>
         <description/>
         <name>chrome_footer</name>
-        <page display_value="BloodBanker">23df8676ffe022106a5affffffffff14</page>
+        <page display_value="Privacy Workspace">582300ed0771201054685d3f0ad30016</page>
         <required_translations>[ ]</required_translations>
         <route/>
         <suffix/>
         <sys_class_name>sys_ux_page_property</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-03-31 16:53:18</sys_created_on>
+        <sys_created_on>2025-04-14 09:22:55</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>global</sys_domain_path>
-        <sys_id>24efca76ffe022106a5affffffffff56</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_id>ef0f2c93ff3022106a5affffffffffe3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>chrome_footer</sys_name>
         <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
         <sys_policy/>
         <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
-        <sys_update_name>sys_ux_page_property_24efca76ffe022106a5affffffffff56</sys_update_name>
+        <sys_update_name>sys_ux_page_property_ef0f2c93ff3022106a5affffffffffe3</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-04-15 01:55:03</sys_updated_on>
+        <sys_updated_on>2025-04-14 09:22:55</sys_updated_on>
         <type>json</type>
-        <unique_name>sn_bloodbanker.23df8676ffe022106a5affffffffff14.root.global.chrome_footer</unique_name>
+        <unique_name>sn_bloodbanker.582300ed0771201054685d3f0ad30016.root.global.chrome_footer</unique_name>
         <value>{
     "public_page": {
+        "enable_footer_topbar": false,
         "footer_topbar_options": {},
+        "enable_footer_bar": false,
         "footer_bar_options": {}
     }
 }</value>
     </sys_ux_page_property>
-    <sys_translated_text action="delete_multiple" query="documentkey=24efca76ffe022106a5affffffffff56"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=ef0f2c93ff3022106a5affffffffffe3"/>
 </record_update>

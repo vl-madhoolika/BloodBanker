@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_rest">
+    <sys_ux_data_broker_rest action="INSERT_OR_UPDATE">
+        <api_name>sn_bloodbanker.userInfo</api_name>
+        <api_url>/api/sn_bloodbanker/get_logged_in_user_info/current</api_url>
+        <batch_exclude>false</batch_exclude>
+        <description>Get logged-in user's bloodbanker info</description>
+        <http_method>GET</http_method>
+        <mutates_server_data>false</mutates_server_data>
+        <name>userInfo</name>
+        <output_schema>{&#13;
+  "type": "object",&#13;
+  "properties": {&#13;
+    "sys_id": { "type": "string" },&#13;
+    "blood_type": { "type": "string" },&#13;
+    "branch_id": { "type": "string" }&#13;
+  }&#13;
+}&#13;
+</output_schema>
+        <parameters/>
+        <private>false</private>
+        <props/>
+        <request_body/>
+        <required_translations>[ ]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <sys_class_name>sys_ux_data_broker_rest</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-14 16:38:24</sys_created_on>
+        <sys_id>412216d7ffb422106a5affffffffff51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>userInfo</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_ux_data_broker_rest_412216d7ffb422106a5affffffffff51</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-14 16:38:24</sys_updated_on>
+    </sys_ux_data_broker_rest>
+    <sys_translated_text action="delete_multiple" query="documentkey=412216d7ffb422106a5affffffffff51"/>
+</record_update>

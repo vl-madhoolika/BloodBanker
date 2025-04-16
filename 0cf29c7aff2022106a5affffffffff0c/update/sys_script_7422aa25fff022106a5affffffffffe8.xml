@@ -12,13 +12,16 @@
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>sn_bloodbanker_request</collection>
-        <condition>current.status == 'collected' &amp;&amp; previous.status != 'collected'</condition>
+        <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition/>
+        <filter_condition table="sn_bloodbanker_request">status=withdraw^ORstatus=rejected^EQ<item display_value="Withdraw" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="withdraw"/>
+            <item display_value="Rejected" endquery="false" field="status" goto="false" newquery="false" operator="=" or="true" value="rejected"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>On Collected  Set Expiration &amp; Sync Inv</name>
+        <name>Combined Withdraw and Reject BR</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -27,117 +30,18 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
-    gs.info("BR Triggered for Request: " + current.number);
-
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+    // Check if the request status is either 'withdrawn' or 'rejected'
     if (current.status == 'withdraw' || current.status == 'rejected') {
-        if (current.status == 'collected') {
-            gs.addErrorMessage('Request or donation cannot be marked as "Collected" after being withdrawn or rejected.');
-            current.setAbortAction(true); // Preventing transition 
-            return;
-        }
-        gs.info("Inventory update skipped for request/donation: " + current.number + " due to withdrawn/rejected status.");
-        return;
-    }
-
-    // Only trigger when status changes to collected
-    if (current.status != 'collected' || previous.status == 'collected') {
-        return;
-    }
-
-    // Request holder details from request table
-    var requestType = current.request_type + '';
-    var userGR = current.user.getRefRecord();
-    var branch = current.branch;
-    var bloodType = userGR.bloodt_type;
-    var qty = parseInt(current.quantity, 10);
-
-
-    // Donation Handling – Add or update inventory
-    if (requestType == 'donate') {
-
-        // Set expiration date 15 days after collection_date
-        if (!current.collection_date.nil()) {
-            var expireDate = new GlideDateTime(current.collection_date);
-            expireDate.addDaysUTC(15);
-            current.expiration_date = expireDate;
-            current.setValue('expiration_date', expireDate);
-            current.update(); // expiration is saved
-        }
-
-        var inventory = new GlideRecord('sn_bloodbanker_blood_inventory');
-        inventory.addQuery('branch_id', branch);
-        inventory.addQuery('blood_type_focus', bloodType);
-        inventory.query();
-
-        if (inventory.next()) {
-            // Log before inventory update
-            var beforeQuantity = inventory.quantity_val;
-            gs.info("Before Update: Inventory for " + bloodType + " at " + branch + " is " + beforeQuantity);
-
-            // Update inventory quantity
-            inventory.quantity_val += qty;
-            inventory.expiration_date = current.expiration_date;
-
-            // Check if the inventory is expired and update is_expired field
-            var currentDateTime = new GlideDateTime();
-            inventory.is_expired = (inventory.expiration_date <= currentDateTime) ? true : false;
-
-            inventory.update();
-
-            // Log after inventory update
-            var afterQuantity = inventory.quantity_val;
-            gs.info("After Update: Inventory for " + bloodType + " at " + branch + " is " + afterQuantity);
-
-            gs.info("Existing inventory updated for donation " + current.number);
-        } else {
-            var newInv = new GlideRecord('sn_bloodbanker_blood_inventory');
-            newInv.initialize();
-            newInv.branch_id = branch;
-            newInv.blood_type_focus = bloodType;
-            newInv.quantity_val = qty;
-            newInv.expiration_date = current.expiration_date;
-
-            // Set is_expired based on the expiration date
-            var currentDateTime = new GlideDateTime();
-            newInv.is_expired = (newInv.expiration_date <= currentDateTime) ? true : false;
-
-            newInv.insert();
-
-            gs.info("New donation inventory inserted for " + current.number);
-        }
-        return;
-    }
-    var totalNeeded = parseInt(current.quantity, 10);
-    var deducted = 0;
-
-    if (requestType == 'request') {
-
-        var invGR = new GlideRecord('sn_bloodbanker_blood_inventory');
-        invGR.addQuery('branch_id', current.branch);
-        invGR.addQuery('blood_type', current.blood_type);
-        invGR.addQuery('expiration_date', '>=', gs.nowDateTime()); // Only valid units
-        invGR.orderBy('expiration_date'); // FIFO - oldest first
-        invGR.query();
-
-        while (invGR.next() && deducted < totalNeeded) {
-            var available = parseInt(invGR.quantity || 0);
-            var toDeduct = Math.min(available, totalNeeded - deducted);
-
-            invGR.quantity = available - toDeduct;
-            invGR.update();
-
-            gs.info("Deducted " + toDeduct + " units from inventory ID: " + invGR.getValue('inventory_unit_id'));
-
-            deducted += toDeduct;
-        }
-
-        if (deducted < totalNeeded) {
-            gs.addErrorMessage('Not enough inventory available to fulfill this request.');
-            current.setAbortAction(true);
-        } else {
-            gs.info("Request " + current.number + " fulfilled with total units deducted: " + deducted);
-        }
+        gs.info("Request " + current.number + " is " + current.status + ". It cannot proceed to collection.");
+        
+        // Make collection-related fields read-only
+        current.setReadOnly('collection_date', true); 
+		current.setReadOnly('donation_date', true); 
+        current.setReadOnly('quantity', true);
+        current.setReadOnly('status', true);
+        
+        current.update();
     }
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -146,15 +50,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7422aa25fff022106a5affffffffffe8</sys_id>
-        <sys_mod_count>49</sys_mod_count>
-        <sys_name>On Collected  Set Expiration &amp; Sync Inv</sys_name>
+        <sys_mod_count>63</sys_mod_count>
+        <sys_name>Combined Withdraw and Reject BR</sys_name>
         <sys_overrides/>
         <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
         <sys_policy/>
         <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
         <sys_update_name>sys_script_7422aa25fff022106a5affffffffffe8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-04-14 04:04:41</sys_updated_on>
+        <sys_updated_on>2025-04-14 16:06:04</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

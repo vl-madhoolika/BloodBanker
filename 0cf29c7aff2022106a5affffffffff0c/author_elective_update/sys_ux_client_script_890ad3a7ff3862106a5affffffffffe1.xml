@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">25858d43ffa022106a5affffffffff4a</macroponent>
+        <name>loadStatusOptions</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function loadStatusOptions(requestId) {
+  const ga = new GlideAjax('BloodbankerStatusControl');
+  ga.addParam('sysparm_name', 'getValidStatuses');
+  ga.addParam('sysparm_request_id', requestId);
+
+  ga.getXMLAnswer((response) => {
+    try {
+      const rawStatuses = JSON.parse(response);
+
+      // Convert to dropdown-friendly format
+      const formattedOptions = rawStatuses.map(status => ({
+        label: status.charAt(0).toUpperCase() + status.slice(1),
+        value: status
+      }));
+
+      // Save into json client state parameter
+      state.statusOptions = formattedOptions;
+    } catch (e) {
+      console.error('Failed to load status options:', e);
+      state.statusOptions = []; // fallback to empty
+    }
+  });
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 16:54:29</sys_created_on>
+        <sys_id>890ad3a7ff3862106a5affffffffffe1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>loadStatusOptions</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_ux_client_script_890ad3a7ff3862106a5affffffffffe1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 16:54:29</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</application>
+        <file_path/>
+        <instance_id>32d9ab945d502210958bd8da217c4512</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_ux_client_script_890ad3a7ff3862106a5affffffffffe1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Default"&gt;25858d43ffa022106a5affffffffff4a&lt;/macroponent&gt;&lt;name&gt;loadStatusOptions&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function loadStatusOptions(requestId) {
+  const ga = new GlideAjax('BloodbankerStatusControl');
+  ga.addParam('sysparm_name', 'getValidStatuses');
+  ga.addParam('sysparm_request_id', requestId);
+
+  ga.getXMLAnswer((response) =&gt; {
+    try {
+      const rawStatuses = JSON.parse(response);
+
+      // Convert to dropdown-friendly format
+      const formattedOptions = rawStatuses.map(status =&gt; ({
+        label: status.charAt(0).toUpperCase() + status.slice(1),
+        value: status
+      }));
+
+      // Save into json client state parameter
+      state.statusOptions = formattedOptions;
+    } catch (e) {
+      console.error('Failed to load status options:', e);
+      state.statusOptions = []; // fallback to empty
+    }
+  });
+}
+]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-04-15 16:54:29&lt;/sys_created_on&gt;&lt;sys_id&gt;890ad3a7ff3862106a5affffffffffe1&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;loadStatusOptions&lt;/sys_name&gt;&lt;sys_package display_value="BloodBanker" source="sn_bloodbanker"&gt;0cf29c7aff2022106a5affffffffff0c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BloodBanker"&gt;0cf29c7aff2022106a5affffffffff0c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_890ad3a7ff3862106a5affffffffffe1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-04-15 16:54:29&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2000766515</payload_hash>
+        <record_name>loadStatusOptions</record_name>
+        <reverted_from/>
+        <source>8ae70d5dff78e2106a5affffffffff84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 16:54:29</sys_created_on>
+        <sys_id>0c0067efff3862106a5affffffffffe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1963a5fa7e40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 16:54:29</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>cc0067ef003862104017f69945ce54e3</update_guid>
+        <update_guid_history>cc0067ef003862104017f69945ce54e3:2000766515</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-15 17:10:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>4f49e66031554fec900ed49f39142ea1</sys_id>
+        <sys_metadata>890ad3a7ff3862106a5affffffffffe1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>loadStatusOptions</sys_name>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_scope_delete display_value="">15eb4780ab3c40378274b73cec9ac5c1</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_890ad3a7ff3862106a5affffffffffe1</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_890ad3a7ff3862106a5affffffffffe1">0c0067efff3862106a5affffffffffe4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 17:10:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

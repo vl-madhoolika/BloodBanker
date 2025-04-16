@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_bloodbanker_request</collection>
+        <condition>current.status == 'collected' &amp;&amp; previous.status != 'collected'</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="sn_bloodbanker_request">request_type=request^user.medical_condition=fit^EQ<item endquery="false" field="request_type" goto="false" newquery="false" operator="=" or="false" value="request"/>
+            <item display_value="Fit" endquery="false" field="user.medical_condition" goto="false" newquery="false" operator="=" or="false" value="fit"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Request Fulfillment Business Rule</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+    var totalNeeded = current.quantity;  
+    var bloodType = current.blood_type;  
+    var branchId = current.branch;  
+    var requestId = current.number; 
+
+    // Query the inventory for the given branch and blood type
+    var inventory = new GlideRecord('sn_bloodbanker_blood_inventory');
+    inventory.addQuery('branch_id', branchId);
+    inventory.addQuery('blood_type_focus', bloodType);
+    inventory.addQuery('expiration_date', '>=', new GlideDateTime());  // Only consider non-expired units
+    inventory.orderBy('expiration_date');
+    inventory.query();
+
+    gs.info('Starting Donation Business Rule for Request: ' + requestId);
+    
+    var totalDeducted = 0;
+    
+    while (inventory.next() && totalNeeded > 0) {
+        var availableQty = parseInt(inventory.quantity_val, 10);
+
+        gs.info("Before Deduction: Inventory for " + inventory.blood_type_focus + " at branch " + inventory.branch_id + " is " + availableQty);
+
+        if (availableQty >= totalNeeded) {
+            // Deduct the needed quantity from the current inventory record
+            inventory.quantity_val -= totalNeeded;
+            inventory.update();  // Update the inventory record
+            totalDeducted += totalNeeded;
+            totalNeeded = 0;  // Request is fully fulfilled
+            gs.info("Inventory after deduction: " + inventory.blood_type_focus + " at branch " + inventory.branch_id + " is " + inventory.quantity_val);
+        } else {
+            // If not enough inventory, deduct available quantity and move to the next record
+            inventory.quantity_val = 0;
+            inventory.update();
+            totalDeducted += availableQty;
+            totalNeeded -= availableQty;
+            gs.info("Inventory after deduction: " + inventory.blood_type_focus + " at branch " + inventory.branch_id + " is " + inventory.quantity_val);
+        }
+    }
+
+    // Handle incomplete fulfillment and update the request status
+    if (totalNeeded > 0) {
+        gs.warn("Request " + requestId + " was not fully fulfilled. Still need: " + totalNeeded);
+        var request = new GlideRecord('sn_bloodbanker_request');
+        if (request.get('number', requestId)) {
+            request.status = 'partially_fulfilled';  // Set status to partially fulfilled
+            request.update();
+        }
+    } else {
+        gs.info("Request " + requestId + " fulfilled completely.");
+        var request = new GlideRecord('sn_bloodbanker_request');
+        if (request.get('number', requestId)) {
+            request.status = 'Fulfilled';  // Set status to fulfilled
+            request.update();
+        }
+    }
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-14 07:15:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>64b15c1fff30a2106a5affffffffff67</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>Request Fulfillment Business Rule</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BloodBanker" source="sn_bloodbanker">0cf29c7aff2022106a5affffffffff0c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BloodBanker">0cf29c7aff2022106a5affffffffff0c</sys_scope>
+        <sys_update_name>sys_script_64b15c1fff30a2106a5affffffffff67</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-15 00:38:34</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=64b15c1fff30a2106a5affffffffff67"/>
+</record_update>
